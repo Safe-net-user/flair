@@ -1,0 +1,58 @@
+{
+  "version": 3,
+  "middleware": {
+    "/": {
+      "files": [
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/src/middleware.js"
+      ],
+      "name": "src/middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!api|_next\\/static|_next\\/image|favicon.ico).*))(.json)?[\\/#\\?]?$",
+          "originalSource": "/((?!api|_next/static|_next/image|favicon.ico).*)"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7d1e0e856c6e3ed96c5ce1f14f23cdd8",
+        "previewModeSigningKey": "92470e8792330fb69418177cbd0b8a9cf218f4b06cd2bed3709455916b1223cb",
+        "previewModeEncryptionKey": "e539eb0cce909ec50e5a22b1bb45a8f0b87aa96af6cdedd21f1d4a13cb4cb531"
+      }
+    }
+  },
+  "functions": {
+    "/api/service/addService/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "prerender-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/service/addService/route.js"
+      ],
+      "name": "app/api/service/addService/route",
+      "page": "/api/service/addService/route",
+      "matchers": [
+        {
+          "regexp": "^/api/service/addService$",
+          "originalSource": "/api/service/addService"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "environments": {
+        "previewModeId": "7d1e0e856c6e3ed96c5ce1f14f23cdd8",
+        "previewModeSigningKey": "92470e8792330fb69418177cbd0b8a9cf218f4b06cd2bed3709455916b1223cb",
+        "previewModeEncryptionKey": "e539eb0cce909ec50e5a22b1bb45a8f0b87aa96af6cdedd21f1d4a13cb4cb531"
+      }
+    }
+  },
+  "sortedMiddleware": [
+    "/"
+  ]
+}
